@@ -1,0 +1,127 @@
+<div class="brand_color">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="titlepage">
+                <h2>our products</h2>
+             </div>
+          </div>
+       </div>
+    </div>
+
+ </div>
+ <!-- our product -->
+ <div class="product">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="title">
+
+                <span>We package the products with best services to make you a happy customer.</span>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <div class="product-bg">
+    <div class="product-bg-white">
+       <div class="container">
+          <div class="row">
+             <!--<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p1.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p2.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p3.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p4.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p5.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p2.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p6.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p7.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p6.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p1.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p2.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="product-box">
+                   <i><img src="assets/icon/p4.png" /></i>
+                   <h3>Norton Internet Security</h3>
+                   <span>$25.00</span>
+                </div>
+             </div>-->
+             <div *ngFor="let s of prodDetails" class=" col-xl-3 col-lg-3 col-md-6 col-sm-12">
+               <div class="product-box">
+                  <i><img src="assets/Product/{{s.prodimg}}" /></i>
+                  <h3>{{s.ptitle}}</h3>
+                  <span>Rs.{{s.pdescription}}</span><br><br>
+                  <button *ngIf="checkTokenUser()" type="submit" class="btn btn-default" (click)="addtocart(s.ptitle,s.pdescription)">Add To Cart</button>
+                  
+                  
+               </div>
+            </div>
+          </div>
+       </div>
+    </div>
+

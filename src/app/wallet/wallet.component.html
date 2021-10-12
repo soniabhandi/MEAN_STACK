@@ -1,0 +1,17 @@
+
+<div class="container">
+    
+    <h1>Add Money in Wallet...</h1>
+    <form #addproject="ngForm" (ngSubmit)="onClickSubmit()">
+
+        <div class="form-group">
+            <label for="ptitle">Amount:</label>
+            <input type="text" class="form-control" id="amount" name="amount" [(ngModel)]="amount" >
+        </div>  
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+
+    </form>
+    <br>
+    <!--<font style="color: green;">{{x}}</font><br>-->
+</div>

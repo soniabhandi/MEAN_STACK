@@ -1,0 +1,31 @@
+
+<div class="container">
+    
+    <table class="table table-bordered">
+        <tr>
+            <th>Product Title</th>
+            <th>Product Price</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tr *ngFor="let p of userplist">
+            <td >{{p.ProductTitle}}</td>
+            <td>{{p.ProductPrice}}</td>
+            <!--<td>
+                <a title="Buy" (click)="buyprod(p.ProductTitle,p.ProductPrice,p)">
+                    <img src="../../assets/icon/delete.png" height="50" width="50"></a>
+                    Buy
+                </a> 
+            </td> -->
+            <td>
+                <a title="remove" (click)="remove(p)">
+                    <!--<img src="../../assets/icon/delete.png" height="50" width="50"></a>-->
+                    Remove
+                </a>
+            </td> 
+        <tr>
+        <tr>
+            <td colspan="4" style="text-align: center;"><a title="Buy All" (click)="buyAll()">Buy All</a></td>
+        </tr>
+    </table>	
+    
+</div>

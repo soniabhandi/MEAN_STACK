@@ -1,0 +1,41 @@
+<h1>Add Project Details Here...</h1>
+<div class="container">
+    <font style="color: red;">{{msg}}</font><br>
+    <form #addproject="ngForm" (ngSubmit)="onClickSubmit(addproject.value)">
+
+        <div class="form-group">
+            <label for="ptitle">Product Name:</label>
+            <input type="text" class="form-control" id="ptitle" name="ptitle" [(ngModel)]="ptitle" >
+        </div>  
+        <div class="form-group">
+            <label for="pdescription">Price:</label>
+            <input type="text" class="form-control" id="pdescription" name="pdescription" [(ngModel)]="pdescription" >
+        </div>
+        <!--<div class="form-group">
+            <label for="pwd">Upload Image:</label>
+            <input type="file" class="form-control" id="prodicon" name="prodicon" [(ngModel)]="prodicon">
+          </div>-->
+        <button type="submit" class="btn btn-default">Submit</button>
+
+    </form>
+    <br>
+    <table class='table'>
+        <tr>
+            <th>S.No.</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Upload Image</th>
+        </tr>
+
+        <tr *ngFor="let p of plist">
+            <td>{{p._id}}</td>
+            <td>{{p.ptitle}}</td>
+            <td>{{p.pdescription}}</td>
+            <td><img src="assets/Product/{{p.prodimg}}" height="120" width="140"><td>
+            <td><input type="file" (change)="handleChangePic($event)" class="form-control">
+            <br>
+            <button class='btn btn-primary' (click)="upload(p['_id'])">Upload</button>     
+            </td>                           
+        </tr>
+    </table>
+</div>

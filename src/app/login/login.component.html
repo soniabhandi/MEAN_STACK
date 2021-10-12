@@ -1,0 +1,31 @@
+<div class="brand_color">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-12">
+           <div class="titlepage">
+              <h2>Login</h2>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<div class="container">
+  <font style="color: red;">{{msg}}</font><br>
+      <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" class="form-control" id="email" name="email" ngModel>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" ngModel>
+          </div>
+
+          <button type="submit" class="btn btn-default">Submit</button>
+    
+      </form>
+      <br>
+  </div>

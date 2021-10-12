@@ -1,0 +1,24 @@
+<div class="container">
+
+    <form #cpuser="ngForm" (ngSubmit)="onClickSubmit(cpuser.value)">
+
+      <div class="form-group">
+          <label for="opass">Old Password :</label>
+          <input type="password" class="form-control" id="opass" name="opass" ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="npass">New Password:</label>
+          <input type="password" class="form-control" id="npass" name="npass" ngModel>
+        </div>
+
+        <div class="form-group">
+            <label for="cnpass">Confirm New Password:</label>
+            <input type="password" class="form-control" id="cnpass" name="cnpass" ngModel>
+          </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+  
+    </form>
+    {{msg}}
+</div>

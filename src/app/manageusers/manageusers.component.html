@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>View & manage users Details</h1>
+    <br>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Adress</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Info</th>
+            <th>status</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let row of userDetails">
+            <td>{{row._id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.username}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.address}}</td>
+            <td>{{row.city}}</td>
+            <td>{{row.gender}}</td>
+            <td>{{row.info}}</td>
+            <td>
+                <a *ngIf="row.status" (click)="manageuserstatus(row._id,'block')" title="block User">
+                <img src="../../assets/icon/block.png" height="50" width="50"></a>
+                <a *ngIf="!row.status" (click)="manageuserstatus(row._id,'verify')" title="verify User">
+                <img src="../../assets/icon/unblock.png" height="50" width="50"></a>
+            </td> 
+            <td>
+                <a (click)="manageuserstatus(row._id,'delete')" title="Delete User">
+                <img src="../../assets/icon/delete.png" height="50" width="50"></a>
+            </td>
+        <tr>
+    </table>	
+    
+</div>

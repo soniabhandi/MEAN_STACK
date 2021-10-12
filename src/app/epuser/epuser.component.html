@@ -1,0 +1,45 @@
+<div class="container">
+
+    <form #epuser="ngForm" (ngSubmit)="onClickSubmit(epuser.value)">
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name">
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username">
+          </div>
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" readonly>
+        </div>
+        <div class="form-group">
+            <label for="number">Mobile Number :</label>
+            <input type="number" class="form-control" id="number" name="number" [(ngModel)]="number" >
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea class="form-control" rows="5" id="address" name="address" [(ngModel)]="address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <select class="form-control" name="city" id="city" [(ngModel)]= "city"> 
+            <option>Mumbai</option>
+            <option>Pune</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gener">Gender:</label>
+            <label>Male</label><input type="radio" name="gender" value='male' [(ngModel)]="gender">
+            <label>Female</label><input type="radio" name="gender" value='female' [(ngModel)]="gender">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-default">Submit</button>
+  
+    </form>
+    
+</div>

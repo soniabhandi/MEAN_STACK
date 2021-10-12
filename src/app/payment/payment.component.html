@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Product Title</th>
+            <th>Product Price</th>
+            
+        </tr>
+        <tr *ngFor="let p of buyall">
+            <td >{{p.ProductTitle}}</td>
+            <td>{{p.ProductPrice}}</td>
+        </tr>
+        <tr>
+            <td>Total Amount :</td>
+            <td>Rs.{{totalamount}}</td>
+        </tr>
+        
+    </table>
+    <button (click)="makePaymentTest(totalamount)" class="btn btn-danger btn-block">Pay</button>
+    <br>
+</div>
+
+

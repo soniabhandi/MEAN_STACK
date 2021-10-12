@@ -1,0 +1,36 @@
+<div class="brand_color">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="titlepage">
+                <h2>Invoice</h2>
+             </div>
+          </div>
+       </div>
+    </div>
+  </div>
+
+<div class="container">
+    
+    <h3>Name : {{name}}</h3>
+    <p>Email : {{email}}</p>
+    <p>Address : {{address}}</p>
+    <p>City : {{city}}</p>
+    <table class="table table-bordered">
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </tr>
+        <tr *ngFor="let p of buyall">
+            <td>{{p.ProductTitle}}</td>
+            <td>{{p.ProductPrice}}</td>
+        </tr>
+        
+        <tr>
+            <td colspan="2">Total Amount Paid : Rs.{{totalamount}}</td>
+        </tr>
+        
+    </table>
+        
+</div>
+
