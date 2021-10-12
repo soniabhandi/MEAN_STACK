@@ -1,5 +1,7 @@
 Install node modules via npm install in the pms folder to run the project
 
+run commans- ng build && nodemon app.js
+
 
 # Pms
 
